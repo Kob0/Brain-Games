@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-import { greeting, getName } from '..';
+import { greeting, greetingByName } from '..';
 
 greeting();
 
-const name = getName();
-
-console.log(`Hello, ${name}!`);
+greetingByName();
