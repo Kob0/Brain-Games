@@ -23,31 +23,29 @@ export const greetingByName = () => {
   return userName;
 };
 
-export const brainEvenGame = () => {
+
+export const brainEvenGame = (name) => {
   const randomNumber = Math.floor(Math.random() * 100);
-  const parity = randomNumber % 2 === 0;
-  const evenNumber = randomNumber === parity;
-  const userName = getName();
   const answer = readlineSync.question('Your answer: ');
 
   for (let i = 0; i <= 2; i += 1) {
     console.log(`Question: ${randomNumber}`);
     console.log(answer);
 
-    if (!evenNumber && answer === 'no') {
+    if (randomNumber % 2 === 0 && answer === 'no') {
       console.log("'no' is the wrong aswer ;(. Correct answer was 'yes'.");
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${name}!`);
       break;
     }
-    if (evenNumber && answer === 'yes') {
+    if (randomNumber % 2 !== 0 && answer === 'yes') {
       console.log("'yes' is the wrong aswer ;(. Correct answer was 'no'.");
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${name}!`);
       break;
     }
 
     console.log('Correct!');
   }
 
-  console.log(`Congratulations, ${userName}!`);
-  return userName;
+  console.log(`Congratulations, ${name}!`);
+  return name;
 };
