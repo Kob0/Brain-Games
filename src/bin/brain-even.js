@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-import { greetingForEvenGame, greetingByName, brainEvenGame } from '..';
+import { greetingForEvenGame, brainEvenGame } from '..';
 
 greetingForEvenGame();
-
-greetingByName();
 
 brainEvenGame();
