@@ -41,7 +41,7 @@
     "jest-cli": "^24.9.0"
   },
   "dependencies": {
-    "npm": "^6.13.3",
+    "npm": "^6.13.4",
     "readline-sync": "^1.4.10"
   }
 }
