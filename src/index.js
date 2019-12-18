@@ -27,9 +27,9 @@ export const brainEvenGame = () => {
   const userName = getName();
   console.log(`Hello, ${userName}!`);
   const randomNumber = Math.floor(Math.random() * 100);
-  const answer = readlineSync.question('Your answer: ');
 
   console.log(`Question: ${randomNumber}`);
+  let answer = readlineSync.question('Your answer: ');
 
   return userName;
 };
