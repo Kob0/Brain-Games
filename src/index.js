@@ -26,9 +26,9 @@ export const greetingByName = () => {
 export const brainEvenGame = () => {
   const userName = getName();
   console.log(`Hello, ${userName}!`);
-  let randomNumber = Math.floor(Math.random() * 100);
 
   for (let i = 0; i <= 2; i += 1) {
+    let randomNumber = Math.floor(Math.random() * 100);
     console.log(`Question: ${randomNumber}`);
     let answer = readlineSync.question('Your answer: ');
     if (answer !== 'yes' && randomNumber % 2 === 0) {
