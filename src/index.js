@@ -28,9 +28,9 @@ export const brainEvenGame = () => {
   console.log(`Hello, ${userName}!`);
 
   for (let i = 0; i <= 2; i += 1) {
-    let randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = Math.floor(Math.random() * 100);
     console.log(`Question: ${randomNumber}`);
-    let answer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
     if (answer !== 'yes' && randomNumber % 2 === 0) {
       console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
       return console.log(`Let's try again, ${userName}!`);
