@@ -43,5 +43,5 @@ export const brainEvenGame = () => {
     console.log('Correct!');
   }
 
-  return console.log('Congratulations!');
+  return console.log(`Congratulations, ${userName}!`);
 };
