@@ -30,9 +30,11 @@ export const brainEvenGame = () => {
 
   console.log(`Question: ${randomNumber}`);
   const answer = readlineSync.question('Your answer: ');
-  if ((answer === 'yes' && randomNumber % 2 === 0) || (answer === 'no' && randomNumber % 2 !== 0)) {
-    console.log('Correct!');
+  if ((answer !== 'yes' && randomNumber % 2 === 0) || (answer !== 'no' && randomNumber % 2 !== 0)) {
+    console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+    console.log(`Let's try again, ${userName}!`);
   }
+  console.log('Correct!');
 
   return userName;
 };
