@@ -26,6 +26,7 @@ export const greetingByName = () => {
 export const brainEvenGame = () => {
   const userName = getName();
   console.log(`Hello, ${userName}!`);
+  console.log(' ');
 
   for (let i = 0; i <= 2; i += 1) {
     const randomNumber = Math.floor(Math.random() * 100);
