@@ -29,11 +29,9 @@ export const brainEvenGame = () => {
   const randomNumber = Math.floor(Math.random() * 100);
 
   console.log(`Question: ${randomNumber}`);
-  let answer = readlineSync.question('Your answer: ');
-  if (answer === "yes" && randomNumber % 2 === 0) || (answer === "no" && randomNumber % 2 !== 0) {
+  const answer = readlineSync.question('Your answer: ');
+  if ((answer === 'yes' && randomNumber % 2 === 0) || (answer === 'no' && randomNumber % 2 !== 0)) {
     console.log('Correct!');
-  }
-    
   }
 
   return userName;
