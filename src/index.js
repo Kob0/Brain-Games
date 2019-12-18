@@ -33,8 +33,10 @@ export const brainEvenGame = () => {
   if ((answer !== 'yes' && randomNumber % 2 === 0) || (answer !== 'no' && randomNumber % 2 !== 0)) {
     console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
     console.log(`Let's try again, ${userName}!`);
+  } else {
+    console.log('Correct!');
   }
-  console.log('Correct!');
+
 
   return userName;
 };
