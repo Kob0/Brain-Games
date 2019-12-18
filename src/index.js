@@ -30,7 +30,6 @@ export const brainEvenGame = () => {
 
   for (let i = 0; i <= 2; i += 1) {
     console.log(`Question: ${randomNumber}`);
-    answer();
 
     if (randomNumber % 2 === 0 && answer === 'no') {
       console.log("'no' is the wrong aswer ;(. Correct answer was 'yes'.");
