@@ -25,7 +25,7 @@ const randomNumbers = () => Math.floor(Math.random() * 100);
 
 export const brainEvenGame = () => {
   const userName = getName();
-  console.log(`Hello, ${userName}!`);
+  console.log(`Hello, ${userName}!\n`);
 
   for (let i = 0; i <= 2; i += 1) {
     const randomNumber = randomNumbers();
