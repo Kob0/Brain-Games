@@ -5,7 +5,7 @@ export const greeting = () => {
 };
 
 export const greetingForEvenGame = () => {
-  console.log('Welcome to the Brain Games!');
+  greeting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
 
@@ -18,18 +18,17 @@ export const getName = () => {
 export const greetingByName = () => {
   const userName = getName();
 
-  console.log(`Hello, ${userName}!`);
-
-  return userName;
+  return console.log(`Hello, ${userName}!`);
 };
+
+const randomNumbers = () => Math.floor(Math.random() * 100);
 
 export const brainEvenGame = () => {
   const userName = getName();
   console.log(`Hello, ${userName}!`);
-  console.log(' ');
 
   for (let i = 0; i <= 2; i += 1) {
-    const randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = randomNumbers();
     console.log(`Question: ${randomNumber}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== 'yes' && randomNumber % 2 === 0) {
