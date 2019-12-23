@@ -18,10 +18,12 @@ export const getName = () => {
 export const greetingByName = () => {
   const userName = getName();
 
-  return console.log(`Hello, ${userName}!`);
+  return console.log(`Hello, ${userName}!\n`);
 };
 
 const randomNumbers = () => Math.floor(Math.random() * 100);
+
+const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 export const brainEvenGame = () => {
   const userName = getName();
@@ -29,15 +31,14 @@ export const brainEvenGame = () => {
 
   for (let i = 0; i <= 2; i += 1) {
     const randomNumber = randomNumbers();
+    const correctAnswer = isEven(randomNumber);
+
     console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer !== 'yes' && randomNumber % 2 === 0) {
-      console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-      return console.log(`Let's try again, ${userName}!`);
-    }
-    if (answer !== 'no' && randomNumber % 2 !== 0) {
-      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-      return console.log(`Let's try again, ${userName}!`);
+
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (correctAnswer !== userAnswer) {
+      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer is '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
     console.log('Correct!');
   }
