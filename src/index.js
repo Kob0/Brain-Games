@@ -79,7 +79,7 @@ export const brainCalcGame = () => {
     const randomNum = randomNumbers();
     const randomNum2 = randomNumbers();
     console.log(`Question: ${randomNum} ${randomOperation} ${randomNum2}`);
-    const correctAnswer = eval(`${randomNum} ${randomOperation} ${randomNum2}`);
+    const correctAnswer = expression(randomNum, randomNum2, randomOperation);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer !== userAnswer) {
