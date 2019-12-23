@@ -38,7 +38,7 @@ export const brainEvenGame = () => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer !== userAnswer) {
-      return console.log(`'${userAnswer}' was wrong answer ;(. Correct answer is '${correctAnswer}'\nLet's try again, ${userName}!`);
+      return console.log(`'${userAnswer}' was wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
     console.log('Correct!');
   }
