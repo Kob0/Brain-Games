@@ -60,10 +60,6 @@ const expression = (num, num2, operation) => {
   }
 };
 
-export const greetingForBrainCalc = () => {
-  console.log('Welcome to the Brain Games!\nWhat is the result of the expression?');
-};
-
 export const brainCalcGame = () => {
   const operations = ['*', '-', '+'];
   const userName = getName();
