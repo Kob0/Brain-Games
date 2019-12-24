@@ -1,12 +1,7 @@
 import readlineSync from 'readline-sync';
 
-export const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-};
-
-export const greetingForEvenGame = () => {
-  greeting();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+export const greeting = (gameGreeting) => {
+  console.log(`Welcome to the Brain Games!\n${gameGreeting}\n`);
 };
 
 export const getName = () => {
