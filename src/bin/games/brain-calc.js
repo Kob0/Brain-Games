@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { greetingForBrainCalc, brainCalcGame } from '../..';
+import { greeting, brainCalcGame } from '../..';
 
-greetingForBrainCalc();
+greeting('Answer "yes" if the number is even, otherwise answer "no".');
 
 brainCalcGame();
