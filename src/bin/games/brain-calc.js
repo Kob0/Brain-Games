@@ -2,6 +2,6 @@
 
 import { greeting, brainCalcGame } from '../..';
 
-greeting('Answer "yes" if the number is even, otherwise answer "no".');
+greeting('What is the result of the expression?');
 
 brainCalcGame();
