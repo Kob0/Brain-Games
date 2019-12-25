@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+// greeting functions.
 
 export const greeting = (gameGreeting) => {
   console.log(`Welcome to the Brain Games!\n${gameGreeting}\n`);
@@ -16,9 +17,32 @@ export const greetingByName = () => {
   return console.log(`Hello, ${userName}!\n`);
 };
 
+// math functions.
+
 const randomNumbers = () => Math.floor(Math.random() * 100);
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+
+const expression = (num, num2, operation) => {
+  switch (operation) {
+    case '*':
+      return num * num2;
+    case '-':
+      return num - num2;
+    case '+':
+      return num + num2;
+    default:
+      return NaN;
+  }
+};
+
+const randomElement = (coll) => {
+  const randomized = Math.floor(Math.random() * coll.length);
+
+  return coll[randomized];
+};
+
+// game functions.
 
 export const brainEvenGame = () => {
   const userName = getName();
@@ -39,25 +63,6 @@ export const brainEvenGame = () => {
   }
 
   return console.log(`Congratulations, ${userName}!`);
-};
-
-const randomElement = (coll) => {
-  const randomized = Math.floor(Math.random() * coll.length);
-
-  return coll[randomized];
-};
-
-const expression = (num, num2, operation) => {
-  switch (operation) {
-    case '*':
-      return num * num2;
-    case '-':
-      return num - num2;
-    case '+':
-      return num + num2;
-    default:
-      return NaN;
-  }
 };
 
 export const brainCalcGame = () => {
