@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
-import { greeting } from './index';
+import { greeting } from './greetings';
+
 
 // eslint-disable-next-line import/prefer-default-export
-export const gameEngine = (question, correctAnswer) => {
-  greeting();
+export const engine = (gameGreeting, question, correctAnswer) => {
+  greeting(gameGreeting);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);
 
