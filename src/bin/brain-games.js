@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { greeting, greetingByName } from '../..';
+import { greeting, greetingByName } from '../greetings';
 
 greeting();
 
