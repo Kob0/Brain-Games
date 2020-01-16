@@ -10,7 +10,7 @@ const randomOperation = () => randomElement(operations);
 const gameData = () => {
   const num = randomNum();
   const num2 = randomNum2();
-  const operation = randomOperation;
+  const operation = randomOperation();
   const question = `Question: ${num} ${operation} ${num2}`;
   const correctAnswer = String(expression(num, num2, operation));
 
