@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 
-export const greeting = (gameGreeting = 0) => {
-  if (gameGreeting === 0) {
-    console.log('Welcome to the Brain Games!');
-  }
+export const generalGreeting = () => {
+  console.log('Welcome to the Brain Games!');
+};
+
+export const greeting = (gameGreeting) => {
   console.log(`Welcome to the Brain Games!\n${gameGreeting}\n`);
 };
 

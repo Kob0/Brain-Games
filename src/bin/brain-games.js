@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { greeting, greetingByName } from '../greetings';
+import { generalGreeting, greetingByName } from '../greetings';
 
-greeting();
+generalGreeting();
 
 greetingByName();
