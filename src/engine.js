@@ -12,7 +12,7 @@ export const engine = (gameGreeting, gameData) => {
     const data = gameData();
     const question = data[0];
     const correctAnswer = data[1];
-    const userAnswer = readlineSync.question(`${question}`);
+    const userAnswer = readlineSync.question(`${question}\nYour answer:` );
     if (userAnswer !== correctAnswer) {
       return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
