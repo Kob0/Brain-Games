@@ -8,8 +8,11 @@ const randomNum2 = () => randomNumbers();
 const randomOperation = () => randomElement(operations);
 
 const gameData = () => {
-  const question = `Question: ${randomNum()} ${randomOperation()} ${randomNum2()}`;
-  const correctAnswer = String(expression(randomNum, randomNum2, randomOperation));
+  const num = randomNum();
+  const num2 = randomNum2();
+  const operation = randomOperation;
+  const question = `Question: ${num} ${operation} ${num2}`;
+  const correctAnswer = String(expression(num, num2, operation));
 
   const data = [question, correctAnswer];
 
