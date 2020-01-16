@@ -6,7 +6,7 @@ const gameGreeting = 'Answer "yes" if the number is even, otherwise answer "no".
 const gameData = () => {
   const number = randomNumbers();
   const question = `Question: ${number}`;
-  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const correctAnswer = isEven(number);
   const data = [question, correctAnswer];
 
   return data;
