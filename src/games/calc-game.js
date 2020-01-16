@@ -10,9 +10,10 @@ const randomOperation = () => randomElement(operations);
 const gameData = () => {
   const question = () => `Question: ${randomNum()} ${randomOperation()} ${randomNum2()}`;
   const correctAnswer = () => String(expression(randomNum, randomNum2, randomOperation));
-  const gameInfo = [question, correctAnswer];
 
-  return gameInfo;
+  const data = [question, correctAnswer];
+
+  return data;
 };
 
 export default () => {

@@ -9,9 +9,9 @@ export const engine = (gameGreeting, gameData) => {
   console.log(`Hello, ${userName}`);
 
   for (let i = 0; i < 3; i += 1) {
-    gameData();
-    const question = gameData[0];
-    const correctAnswer = gameData[1];
+    const data = gameData();
+    const question = data[0];
+    const correctAnswer = data[1];
     const userAnswer = readlineSync.question(`${question}: `);
     if (userAnswer !== correctAnswer) {
       return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
