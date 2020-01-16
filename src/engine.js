@@ -6,7 +6,7 @@ import { greeting } from './greetings';
 export const engine = (gameGreeting, gameData) => {
   greeting(gameGreeting);
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}`);
+  console.log(`Hello, ${userName}\n`);
 
   for (let i = 0; i < 3; i += 1) {
     const data = gameData();
