@@ -1,6 +1,6 @@
 export const randomNumbers = () => Math.floor(Math.random() * 100);
 
-export const isEven = (number) => (number % 2 === 0 ? 'true' : 'false');
+export const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 export const expression = (num, num2, operation) => {
   switch (operation) {
