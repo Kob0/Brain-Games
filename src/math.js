@@ -20,3 +20,11 @@ export const randomElement = (coll) => {
 
   return coll[randomized];
 };
+
+export const greaterCommonDivisor = (num, num2) => {
+  if (num2 > 0) {
+    const div = num % num2;
+    return greaterCommonDivisor(num2, div);
+  }
+  return Math.abs(num);
+};
