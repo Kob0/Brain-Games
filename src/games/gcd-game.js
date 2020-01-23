@@ -7,7 +7,7 @@ const gameData = () => {
   const num = randomNumbers();
   const num2 = randomNumbers();
   const question = `${num} ${num2}`;
-  const correctAnswer = greaterCommonDivisor(num, num2);
+  const correctAnswer = String(greaterCommonDivisor(num, num2));
   const data = [question, correctAnswer];
 
   return data;
