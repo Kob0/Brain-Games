@@ -9,7 +9,7 @@ const gameData = () => {
   const progressionStep = randomNumbers(1, 100);
   progression.push(firstElement);
 
-  for (let i = 1; i < 9; i += 1) {
+  for (let i = 1; i <= 9; i += 1) {
     progression[i] = progression[i - 1] + progressionStep;
     progression.push(progression[i]);
   }
