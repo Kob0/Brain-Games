@@ -6,8 +6,8 @@ const operations = ['*', '-', '+'];
 const randomOperation = () => randomElement(operations);
 
 const gameData = () => {
-  const num = randomNumbers();
-  const num2 = randomNumbers();
+  const num = randomNumbers(1, 100);
+  const num2 = randomNumbers(1, 100);
   const operation = randomOperation();
   const question = `Question: ${num} ${operation} ${num2}`;
   const correctAnswer = String(expression(num, num2, operation));

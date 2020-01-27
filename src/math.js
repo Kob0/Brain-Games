@@ -1,4 +1,4 @@
-export const randomNumbers = () => Math.floor(Math.random() * 100);
+export const randomNumbers = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 

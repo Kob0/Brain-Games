@@ -4,7 +4,7 @@ import { randomNumbers, isEven } from '../math';
 const gameGreeting = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameData = () => {
-  const number = randomNumbers();
+  const number = randomNumbers(1, 100);
   const question = `Question: ${number}`;
   const correctAnswer = isEven(number);
   const data = [question, correctAnswer];
