@@ -17,7 +17,7 @@ const gameData = () => {
   const questionElement = randomNumbers(0, 9);
   const correctAnswer = progression[questionElement];
   progression[questionElement] = '..';
-  const question = progression.split(' ');
+  const question = progression.join(' ');
   const data = [question, correctAnswer];
 
   return data;
