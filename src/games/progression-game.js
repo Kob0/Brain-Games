@@ -9,13 +9,13 @@ const gameData = () => {
   const progressionStep = randomNumbers(1, 100);
   progression.push(firstElement);
 
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < 9; i += 1) {
     progression[i] = progression[i - 1] + progressionStep;
     progression.push(progression[i]);
   }
 
   const questionElement = randomNumbers(0, 9);
-  const correctAnswer = progression[questionElement];
+  const correctAnswer = String(progression[questionElement]);
   progression[questionElement] = '..';
   const question = progression.join(' ');
   const data = [question, correctAnswer];
