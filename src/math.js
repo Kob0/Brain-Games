@@ -28,3 +28,17 @@ export const greaterCommonDivisor = (num, num2) => {
   }
   return Math.abs(num);
 };
+
+export const isPrime = (num) => {
+  if (num === 1) {
+    return 'yes';
+  }
+
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+
+  return 'yes';
+};
