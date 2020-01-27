@@ -4,7 +4,7 @@ import { randomNumbers, isPrime } from '../math';
 const gameGreeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gameData = () => {
-  const number = randomNumbers();
+  const number = randomNumbers(1, 100);
   const question = `Question: ${number}`;
   const correctAnswer = String(isPrime(number));
   const data = [question, correctAnswer];
