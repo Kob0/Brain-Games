@@ -1,7 +1,5 @@
-// eslint-disable-next-line import/no-unresolved
 import readlineSync from 'readline-sync';
 import { greeting } from './greetings';
-
 
 // eslint-disable-next-line import/prefer-default-export
 export const engine = (gameGreeting, gameData) => {
