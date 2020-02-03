@@ -17,7 +17,7 @@ export const isPrime = (num) => {
   return 'yes';
 };
 
-const gameData = () => {
+const getGameData = () => {
   const question = genRandomNumber(1, 100);
   const correctAnswer = String(isPrime(question));
 
@@ -25,7 +25,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, getGameData);
 
   return game;
 };

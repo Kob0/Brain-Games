@@ -11,7 +11,7 @@ export const greaterCommonDivisor = (num, num2) => {
   return Math.abs(num);
 };
 
-const gameData = () => {
+const getGameData = () => {
   const num = genRandomNumber(1, 100);
   const num2 = genRandomNumber(1, 100);
   const question = `${num} ${num2}`;
@@ -22,7 +22,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, getGameData);
 
   return game;
 };

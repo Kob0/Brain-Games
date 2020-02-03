@@ -25,7 +25,7 @@ const gameGreeting = 'What is the result of the expression?';
 const operations = ['*', '-', '+'];
 const randomOperation = () => randomElement(operations);
 
-const gameData = () => {
+const getGameData = () => {
   const num = genRandomNumber(1, 100);
   const num2 = genRandomNumber(1, 100);
   const operation = randomOperation();
@@ -38,7 +38,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, getGameData);
 
   return game;
 };

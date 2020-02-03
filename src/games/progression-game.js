@@ -3,7 +3,7 @@ import genRandomNumber from '../math';
 
 const gameGreeting = 'What number is missing in the progression?';
 
-const gameData = () => {
+const getGameData = () => {
   const progression = [];
   const firstElement = genRandomNumber(1, 100);
   const progressionStep = genRandomNumber(1, 100);
@@ -25,7 +25,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, getGameData);
 
   return game;
 };

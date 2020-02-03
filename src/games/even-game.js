@@ -5,7 +5,7 @@ const gameGreeting = 'Answer "yes" if the number is even, otherwise answer "no".
 
 const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-const gameData = () => {
+const getGameData = () => {
   const number = genRandomNumber(1, 100);
   const question = `Question: ${number}`;
   const correctAnswer = isEven(number);
@@ -14,7 +14,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, getGameData);
 
   return game;
 };
