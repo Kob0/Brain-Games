@@ -1,13 +1,15 @@
 import readlineSync from 'readline-sync';
 import { greeting } from './greetings';
 
+const roundsCount = 3;
+
 // eslint-disable-next-line import/prefer-default-export
-export const engine = (gameGreeting, gameData) => {
+export const makeGame = (gameGreeting, gameData) => {
   greeting(gameGreeting);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}\n`);
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const data = gameData();
     const question = `Question: ${data[0]}`;
     const correctAnswer = data[1];

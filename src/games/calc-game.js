@@ -1,4 +1,4 @@
-import { engine } from '../engine';
+import { makeGame } from '..';
 import genRandomNumber from '../math';
 
 
@@ -29,7 +29,7 @@ const gameData = () => {
   const num = genRandomNumber(1, 100);
   const num2 = genRandomNumber(1, 100);
   const operation = randomOperation();
-  const question = `Question: ${num} ${operation} ${num2}`;
+  const question = `${num} ${operation} ${num2}`;
   const correctAnswer = String(expression(num, num2, operation));
 
   const data = [question, correctAnswer];
@@ -38,7 +38,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = engine(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, gameData);
 
   return game;
 };

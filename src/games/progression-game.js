@@ -1,4 +1,4 @@
-import { engine } from '../engine';
+import { makeGame } from '..';
 import genRandomNumber from '../math';
 
 const gameGreeting = 'What number is missing in the progression?';
@@ -25,7 +25,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = engine(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, gameData);
 
   return game;
 };

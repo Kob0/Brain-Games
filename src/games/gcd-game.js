@@ -1,4 +1,4 @@
-import { engine } from '../engine';
+import { makeGame } from '..';
 import genRandomNumber from '../math';
 
 const gameGreeting = 'Find the greatest common divisor of given numbers.';
@@ -22,7 +22,7 @@ const gameData = () => {
 };
 
 export default () => {
-  const game = engine(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, gameData);
 
   return game;
 };

@@ -1,4 +1,4 @@
-import { engine } from '../engine';
+import { makeGame } from '..';
 import genRandomNumber from '../math';
 
 const gameGreeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -18,16 +18,14 @@ export const isPrime = (num) => {
 };
 
 const gameData = () => {
-  const number = genRandomNumber(1, 100);
-  const question = `Question: ${number}`;
-  const correctAnswer = String(isPrime(number));
-  const data = [question, correctAnswer];
+  const question = genRandomNumber(1, 100);
+  const correctAnswer = String(isPrime(question));
 
-  return data;
+  return [question, correctAnswer];
 };
 
 export default () => {
-  const game = engine(gameGreeting, gameData);
+  const game = makeGame(gameGreeting, gameData);
 
   return game;
 };
