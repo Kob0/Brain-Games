@@ -16,9 +16,8 @@ const getGameData = () => {
   const num2 = genRandomNumber(1, 100);
   const question = `${num} ${num2}`;
   const correctAnswer = String(greaterCommonDivisor(num, num2));
-  const data = [question, correctAnswer];
 
-  return data;
+  return [question, correctAnswer];
 };
 
 export default () => {
