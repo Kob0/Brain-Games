@@ -18,8 +18,9 @@ export const isPrime = (num) => {
 };
 
 const getGameData = () => {
-  const question = genRandomNumber(1, 100);
-  const correctAnswer = String(isPrime(question));
+  const number = genRandomNumber(1, 100);
+  const question = number.toString();
+  const correctAnswer = String(isPrime(number));
 
   return [question, correctAnswer];
 };
