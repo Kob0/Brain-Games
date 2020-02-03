@@ -1,12 +1,12 @@
 import { engine } from '../engine';
-import { randomNumbers } from '../math';
+import genRandomNumber from '../math';
 
 const gameGreeting = 'What number is missing in the progression?';
 
 const gameData = () => {
   const progression = [];
-  const firstElement = randomNumbers(1, 100);
-  const progressionStep = randomNumbers(1, 100);
+  const firstElement = genRandomNumber(1, 100);
+  const progressionStep = genRandomNumber(1, 100);
   progression.push(firstElement);
 
   for (let i = 1; i < 10; i += 1) {
@@ -15,7 +15,7 @@ const gameData = () => {
     progression.push(element);
   }
 
-  const questionElement = randomNumbers(0, 9);
+  const questionElement = genRandomNumber(0, 9);
   const correctAnswer = String(progression[questionElement]);
   progression[questionElement] = '..';
   const question = progression.join(' ');
