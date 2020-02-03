@@ -15,10 +15,10 @@ export const makeGame = (gameGreeting, gameData) => {
     const correctAnswer = data[1];
     const userAnswer = readlineSync.question(`${question}\nYour answer: `);
     if (userAnswer !== correctAnswer) {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
     console.log('Correct!');
   }
 
-  return console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
