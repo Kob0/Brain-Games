@@ -4,8 +4,8 @@ import { greeting } from './greetings';
 const roundsCount = 3;
 
 // eslint-disable-next-line import/prefer-default-export
-export const makeGame = (gameGreeting, gameData) => {
-  greeting(gameGreeting);
+export const makeGame = (description, gameData) => {
+  greeting(description);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}\n`);
 
