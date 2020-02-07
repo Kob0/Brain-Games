@@ -1,4 +1,4 @@
-import { makeGame } from '..';
+import makeGame from '..';
 import genRandomNumber from '../math';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';

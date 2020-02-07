@@ -1,4 +1,4 @@
-import { makeGame } from '..';
+import makeGame from '..';
 import genRandomNumber from '../math';
 
 

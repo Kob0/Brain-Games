@@ -1,11 +1,9 @@
 import readlineSync from 'readline-sync';
-import { greeting } from './greetings';
 
 const roundsCount = 3;
 
-// eslint-disable-next-line import/prefer-default-export
-export const makeGame = (description, gameData) => {
-  greeting(description);
+export default (description, gameData) => {
+  console.log(`Welcome to the Brain Games!\n${description}\n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}\n`);
 
@@ -16,6 +14,7 @@ export const makeGame = (description, gameData) => {
     const userAnswer = readlineSync.question(`${question}\nYour answer: `);
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
+      break;
     }
     console.log('Correct!');
   }
