@@ -21,7 +21,7 @@ export const randomElement = (coll) => {
   return coll[randomized];
 };
 
-const gameGreeting = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const operations = ['*', '-', '+'];
 const randomOperation = () => randomElement(operations);
 
@@ -38,7 +38,7 @@ const getGameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, getGameData);
+  const game = makeGame(description, getGameData);
 
   return game;
 };

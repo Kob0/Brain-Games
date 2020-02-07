@@ -1,7 +1,7 @@
 import { makeGame } from '..';
 import genRandomNumber from '../math';
 
-const gameGreeting = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => (number % 2 === 0);
 
@@ -14,7 +14,7 @@ const getGameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, getGameData);
+  const game = makeGame(description, getGameData);
 
   return game;
 };

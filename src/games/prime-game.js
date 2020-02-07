@@ -1,7 +1,7 @@
 import { makeGame } from '..';
 import genRandomNumber from '../math';
 
-const gameGreeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export const isPrime = (num) => {
   if (num === 1) {
@@ -26,7 +26,7 @@ const getGameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, getGameData);
+  const game = makeGame(description, getGameData);
 
   return game;
 };

@@ -1,7 +1,7 @@
 import { makeGame } from '..';
 import genRandomNumber from '../math';
 
-const gameGreeting = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getGameData = () => {
   const progression = [];
@@ -26,7 +26,7 @@ const getGameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, getGameData);
+  const game = makeGame(description, getGameData);
 
   return game;
 };

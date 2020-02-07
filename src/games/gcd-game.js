@@ -1,7 +1,7 @@
 import { makeGame } from '..';
 import genRandomNumber from '../math';
 
-const gameGreeting = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 export const greaterCommonDivisor = (num, num2) => {
   if (num2 > 0) {
@@ -21,7 +21,7 @@ const getGameData = () => {
 };
 
 export default () => {
-  const game = makeGame(gameGreeting, getGameData);
+  const game = makeGame(description, getGameData);
 
   return game;
 };
