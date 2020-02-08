@@ -5,22 +5,22 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 export const isPrime = (num) => {
   if (num === 1) {
-    return 'yes';
+    return true;
   }
 
   for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
 
-  return 'yes';
+  return true;
 };
 
 const getGameData = () => {
   const number = genRandomNumber(1, 100);
   const question = number.toString();
-  const correctAnswer = String(isPrime(number));
+  const correctAnswer = String(isPrime(number) ? 'yes' : 'no');
 
   return [question, correctAnswer];
 };
