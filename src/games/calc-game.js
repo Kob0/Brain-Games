@@ -23,12 +23,11 @@ export const randomElement = (coll) => {
 
 const description = 'What is the result of the expression?';
 const operations = ['*', '-', '+'];
-const randomOperation = () => randomElement(operations);
 
 const getGameData = () => {
   const num = genRandomNumber(1, 100);
   const num2 = genRandomNumber(1, 100);
-  const operation = randomOperation();
+  const operation = randomElement(operations);
   const question = `${num} ${operation} ${num2}`;
   const correctAnswer = String(expression(num, num2, operation));
 
