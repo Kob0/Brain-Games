@@ -20,9 +20,8 @@ const getGameData = () => {
   const correctAnswer = String(progression[questionElement]);
   progression[questionElement] = '..';
   const question = progression.join(' ');
-  const data = [question, correctAnswer];
 
-  return data;
+  return [question, correctAnswer];
 };
 
 export default () => {
