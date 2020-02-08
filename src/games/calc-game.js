@@ -2,7 +2,7 @@ import makeGame from '..';
 import genRandomNumber from '../math';
 
 
-const expression = (num, num2, operation) => {
+const calculateExpression = (num, num2, operation) => {
   switch (operation) {
     case '*':
       return num * num2;
@@ -29,7 +29,7 @@ const getGameData = () => {
   const num2 = genRandomNumber(1, 15);
   const operation = getRandomOperation(operations);
   const question = `${num} ${operation} ${num2}`;
-  const correctAnswer = String(expression(num, num2, operation));
+  const correctAnswer = String(calculateExpression(num, num2, operation));
 
   return [question, correctAnswer];
 };
