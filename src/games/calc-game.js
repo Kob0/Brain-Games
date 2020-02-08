@@ -16,7 +16,7 @@ const expression = (num, num2, operation) => {
 };
 
 export const randomElement = (coll) => {
-  const randomized = Math.floor(Math.random() * coll.length);
+  const randomized = genRandomNumber(0, coll.length - 1);
 
   return coll[randomized];
 };
