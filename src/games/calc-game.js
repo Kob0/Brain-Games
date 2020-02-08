@@ -15,25 +15,23 @@ const expression = (num, num2, operation) => {
   }
 };
 
-export const randomElement = (coll) => {
-  const randomized = genRandomNumber(0, coll.length - 1);
+export const getRandomOperation = (operations) => {
+  const randomOperation = genRandomNumber(0, operations.length - 1);
 
-  return coll[randomized];
+  return operations[randomOperation];
 };
 
 const description = 'What is the result of the expression?';
 const operations = ['*', '-', '+'];
 
 const getGameData = () => {
-  const num = genRandomNumber(1, 100);
-  const num2 = genRandomNumber(1, 100);
-  const operation = randomElement(operations);
+  const num = genRandomNumber(1, 20);
+  const num2 = genRandomNumber(1, 15);
+  const operation = getRandomOperation(operations);
   const question = `${num} ${operation} ${num2}`;
   const correctAnswer = String(expression(num, num2, operation));
 
-  const data = [question, correctAnswer];
-
-  return data;
+  return [question, correctAnswer];
 };
 
 export default () => {
