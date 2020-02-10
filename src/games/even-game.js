@@ -13,8 +13,4 @@ const getGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => {
-  const game = makeGame(description, getGameData);
-
-  return game;
-};
+export default () => makeGame(description, getGameData);
