@@ -8,9 +8,7 @@ export default (description, getGameData) => {
   console.log(`Hello, ${userName}\n`);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const data = getGameData();
-    const question = `Question: ${data[0]}`;
-    const correctAnswer = data[1];
+    const [question, correctAnswer] = getGameData();
     const userAnswer = readlineSync.question(`${question}\nYour answer: `);
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
