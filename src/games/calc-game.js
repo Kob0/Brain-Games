@@ -15,7 +15,7 @@ const calculateExpression = (num, num2, operation) => {
   }
 };
 
-export const getRandomOperation = (operations) => {
+const getRandomOperation = (operations) => {
   const randomOperation = genRandomNumber(0, operations.length - 1);
 
   return operations[randomOperation];
