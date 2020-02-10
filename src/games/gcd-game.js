@@ -3,7 +3,7 @@ import genRandomNumber from '../math';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-export const getGreaterCommonDivisor = (num, num2) => {
+const getGreaterCommonDivisor = (num, num2) => {
   if (num2 > 0) {
     const div = num % num2;
     return getGreaterCommonDivisor(num2, div);
