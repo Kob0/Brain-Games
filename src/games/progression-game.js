@@ -15,9 +15,9 @@ const getGameData = () => {
     progression.push(element);
   }
 
-  const questionElement = genRandomNumber(0, progressionLength - 1);
-  const correctAnswer = String(progression[questionElement]);
-  progression[questionElement] = '..';
+  const hiddenElementIndex = genRandomNumber(0, progressionLength - 1);
+  const correctAnswer = String(progression[hiddenElementIndex]);
+  progression[hiddenElementIndex] = '..';
   const question = progression.join(' ');
 
   return [question, correctAnswer];
