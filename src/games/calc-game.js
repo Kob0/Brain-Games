@@ -11,7 +11,7 @@ const calculateExpression = (num, num2, operation) => {
     case '+':
       return num + num2;
     default:
-      return NaN;
+      return null;
   }
 };
 
