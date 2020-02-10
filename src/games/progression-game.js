@@ -11,8 +11,7 @@ const getGameData = () => {
   const progressionLength = 10;
 
   for (let i = 1; i < progressionLength; i += 1) {
-    let element = progression[i];
-    element = progression[i - 1] + progressionStep;
+    const element = progression[i - 1] + progressionStep;
     progression.push(element);
   }
 
