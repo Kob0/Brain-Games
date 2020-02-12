@@ -42,7 +42,6 @@
     "eslint-plugin-import": "^2.20.0"
   },
   "dependencies": {
-    "npm": "^6.13.6",
     "readline-sync": "^1.4.10"
   }
 }
