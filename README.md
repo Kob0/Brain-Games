@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/Kob0/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Kob0/frontend-project-lvl1)
 
+Welcome to the "Brain Games"!
+
 This package includes 5 different games. Each game lasts up to three rounds if the answers are correct and interrupts if the answer is wrong.
 
 If you want to play "brain-even" game - just type in console **brain-even** and it will start.
